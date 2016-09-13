@@ -16,20 +16,12 @@ public class WelcomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
+
                 btnView = (Button) findViewById(R.id.btnViewWish);
                 btnView.setOnClickListener(new btnClickListener());
 
-            }
-        });
     }
     private class btnClickListener implements View.OnClickListener
     {
@@ -37,7 +29,7 @@ public class WelcomeActivity extends AppCompatActivity {
         public void onClick(View v) {
             Intent objIntent = new Intent(WelcomeActivity.this,BirthdayWishesActivity.class);
             startActivity(objIntent);
-            System.out.println("hi");
+
         }
     }
 
