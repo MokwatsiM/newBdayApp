@@ -1,73 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/theme"
     android:fitsSystemWindows="true"
     tools:context="com.ekasilab.newapp.WelcomeActivity">
 
-    <android.support.design.widget.AppBarLayout
+
+
+
+
+    <ImageView
+        android:id="@+id/imgbday"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="match_parent"
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </android.support.design.widget.AppBarLayout>
-
-    <include layout="@layout/content_welcome" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_dialog_email" />
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+        android:src="@drawable/funnybirthdaywishes"
+        android:scaleType="centerCrop" />
 
     <TextView
-        android:text="Happy Birthday!"
-        android:layout_marginTop="58dp"
-        android:background="@android:color/darker_gray"
+        android:id="@+id/yourTheBest_txv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#AED581"
-        android:textSize="45sp"/>
-    <TextView
+        android:layout_alignBottom="@+id/imgbday"
+        android:paddingLeft="16dp"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="16dp"
         android:text="You're the best!"
-        android:background="#2196f3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#AED598"
-        android:textSize="45sp"
-        android:textAppearance="?android:textAppearanceLarge"/>
-
-
-   <ImageView
-       android:src="@drawable/birthdaycake"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:scaleType="centerCrop"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="View Birthday Wishes from friends"
-        android:id="@+id/btnViewWish"
-        android:enabled="true" />
-
-
-
-</LinearLayout>
-
-
-</android.support.design.widget.CoordinatorLayout>
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@android:color/black"
+        android:textSize="40sp" />
+</RelativeLayout>
