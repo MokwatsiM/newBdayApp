@@ -1,36 +1,40 @@
 package com.ekasilab.newapp;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
+import android.widget.TextView;
+
 public class WelcomeActivity extends AppCompatActivity {
 
-    private Button btnView;
+
+
+    private MediaPlayer plyMfr;
+   
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
+        plyMfr = new MediaPlayer();
+        plyMfr = MediaPlayer.create(this,R.raw.mfr_friends);
+        plyMfr.start();
 
-
-                btnView = (Button) findViewById(R.id.btnViewWish);
-                btnView.setOnClickListener(new btnClickListener());
 
     }
-    private class btnClickListener implements View.OnClickListener
-    {
-        @Override
-        public void onClick(View v) {
-            Intent objIntent = new Intent(WelcomeActivity.this,BirthdayWishesActivity.class);
-            startActivity(objIntent);
 
-        }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        plyMfr.stop();
     }
-
 }
