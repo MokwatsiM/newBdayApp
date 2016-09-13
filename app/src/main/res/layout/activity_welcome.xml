@@ -17,6 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
+        android:contentDescription="@string/ContentDescription"
         android:src="@drawable/funnybirthdaywishes"
         android:scaleType="centerCrop" />
 
@@ -25,10 +26,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/imgbday"
+        android:paddingRight="16dp"
+        android:paddingStart="16dp"
         android:paddingLeft="16dp"
         android:layout_centerHorizontal="true"
         android:paddingBottom="16dp"
-        android:text="You're the best!"
+        android:text="@string/The_best"
         android:textAppearance="?android:textAppearanceLarge"
         android:textColor="@android:color/black"
         android:textSize="40sp" />

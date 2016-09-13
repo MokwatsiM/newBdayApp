@@ -2,5 +2,10 @@
     <string name="app_name">NewApp</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_welcome">Bithday Card App</string>
-    <string name="btnViewWishes">btnId</string>
+    <string name="title_activity_drawer">DrawerActivity</string>
+    <string name="The_best">Your The best!!</string>
+    <string name="ContentDescription">Happy Birthday Image</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
 </resources>
